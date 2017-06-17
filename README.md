@@ -85,3 +85,21 @@ In order to get virtual env working you'll need to do:
 
 to set up the virtual env.
 
+
+### Setting up the database
+
+Create database user - `createuser -P -s -e -d admin_user` 
+
+*Note*: local user password is 1234
+
+Create database in postgres - `createdb hacking_against_slavery_db -U admin_user`
+
+Make migrations in Django - `python manage.py makemigrations`
+
+Migrate the database in Django - `python manage.py migrate`
+
+### For Migrating individual models
+
+Make migrations in Django - `python manage.py makemigrations investigator`
+
+Migrate the database in Django - `python manage.py migrate investigator`
